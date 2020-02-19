@@ -1,17 +1,12 @@
 .app {
   text-align: center;
+  width: 80%;
+  margin: 60px auto;
+  max-width: 600px;
 }
 
-.app-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .app-logo {
-    animation: app-logo-spin infinite 20s linear;
-  }
-}
+
 
 .app-header {
   background-color: #282c34;
@@ -28,11 +23,14 @@
   color: #61dafb;
 }
 
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.row{
+  display: flex;
+
+}
+
+html{
+  font-family: 'Fira Code', 'Helvetica Neue';
+  background-color: #444;
 }
