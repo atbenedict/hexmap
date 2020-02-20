@@ -27,10 +27,10 @@ const StateProvider = ({ children }) => {
         };
         return newState;
 
-      case "INIT_LOCATION":
+      case "INIT_WORLD":
         newState = {
           ...state,
-          world: [...state.world, action.location]
+          world: action.world
         };
         console.log(newState);
         return newState;

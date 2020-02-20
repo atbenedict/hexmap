@@ -29,9 +29,9 @@ const Hex = ({
   return (
     <div>
       <svg
-        width={width}
+        width={hexWidth}
         style={style}
-        height={height}
+        height={hexWidth}
         viewBox={viewBox}
         fill={fill}
         stroke={stroke}

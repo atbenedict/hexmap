@@ -1,5 +1,5 @@
-import React from 'react'
-import worldinit from './init.js'
+import React, {useContext} from 'react'
+import { store } from "../../utils/store.js";
 import Location from "../location/location.jsx"
 import styled from 'styled-components'
 import uuid from 'react-uuid'
@@ -25,13 +25,16 @@ width: 100%;
 `
 
 export const World = ({width}) => {
+    const globalState = useContext(store);
+    const world = globalState.state.world
+    
+    console.log(world)
   //want to create grid based upon dynamic number, not fixed like I'm using here
     const hexAcross = 16;
     const hexWidth = width < (600/.8)?Math.floor((0.8*width)/hexAcross):Math.floor(600/hexAcross);
     console.log(hexWidth)
     return(
-        
-    worldinit.map((item) => {
+    world.map((item) => {
         
             return (
                 <StyledWorld key={uuid()} hexWidth={hexWidth}>
@@ -49,4 +52,6 @@ export const World = ({width}) => {
               </StyledWorld>
             )
           })
-   )}
+   )
+   
+   }
