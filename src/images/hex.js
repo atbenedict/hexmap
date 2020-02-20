@@ -1,5 +1,18 @@
 import React from "react";
 import grey from "./greyhex.png";
+import styled from "styled-components";
+
+const StyledHex = styled.div`
+  :hover {
+    .a {
+      fill: blue;
+    }
+    .svgIcon {
+      -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+      filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+    }
+  }
+`;
 
 const Hex = ({
   hexWidth = "24",
@@ -27,7 +40,7 @@ const Hex = ({
   // let bBox = Hex.getBBox();
   // console.log(bBox.x, bBox.y);
   return (
-    <div>
+    <StyledHex>
       <svg
         width={hexWidth}
         style={style}
@@ -67,7 +80,7 @@ const Hex = ({
           points="64,48 64,16 32,0 0,16 0,48 32,64 "
         />
       </svg>
-    </div>
+    </StyledHex>
   );
 };
 
